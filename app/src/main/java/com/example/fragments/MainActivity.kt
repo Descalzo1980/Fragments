@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         myBtnFirst.setOnClickListener{
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment,firstFragment)
+                addToBackStack(null)
                 commit()
             }
         }
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         myBtnSecond.setOnClickListener{
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment,secondFragment)
+                addToBackStack(null)
                 commit()
             }
         }
